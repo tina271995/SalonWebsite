@@ -1,0 +1,255 @@
+/* Styling for the home container */
+.home-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items */
+    justify-content: space-between; /* Space between text and image */
+    padding: 20px;
+    background-color: none; /* Semi-transparent pink */
+    height: 100vh; /* Full screen height */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/static/images/background_image.jpg'); /* Ensure this path matches your project's structure */
+    background-size: cover; /* Makes the image cover the entire screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the image fixed during scrolling */
+    font-family: 'Arial', sans-serif; /* Optional font styling */
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+  
+/* Styling for text content */
+.text-content {
+    flex: 1;
+    padding: 50px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7); /* Optional: Add a white transparent box for better readability */
+    border-radius: 1px;
+}
+
+.text-content h2 {
+    font-size: 3rem;
+    color: #ff4c00;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    color:#ff4c00;
+}
+
+.services-container {
+    padding: 20px;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+}
+
+
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 20px; /* Add padding for spacing */
+}
+
+.accordion-content.active {
+    max-height: 1000px; /* Adjust based on content height */
+    padding: 20px; /* Add padding when active */
+}
+
+.accordion-header {
+    height: 80px; /* Automatically adjust to content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .05px .10px; /* Further reduce padding */
+    background-color: #ff4c00;
+    color: #fbf7fb;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: background-color 0.0s;
+    overflow: hidden; /* Prevent content overflow */
+    margin-bottom: 5px; /* Add spacing between boxes */
+}
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Add spacing between accordion headers */
+}
+
+
+.accordion-header:hover {
+    background-color: #ff8c00;
+}
+
+.icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+.accordion-header.active .icon {
+    transform: rotate(180deg); /* Rotate the arrow when active */
+}
+
+
+/* Packages Grid */
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.package-item {
+    text-align: center;
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(255, 253, 253, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.package-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(252, 251, 251, 0.2);
+}
+
+.package-item img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.package-item p {
+    font-size: 1rem;
+    color: #ff4c00;
+    font-weight: bold;
+}
+
+/* Styling for Appointment Form */
+.appointments-container {
+    max-width: 50%; /* Keep content aligned to the left */
+    text-align: left; /* Left align text */
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9); /* Light background for readability */
+    border-radius: 10px;
+    margin: 50px;
+    box-shadow: 0px 4px 10px rgba(247, 245, 245, 0.2);
+}
+
+/* Heading Styling */
+.appointments-container h2 {
+    font-size: 2rem;
+    color: #ff4c00;
+    margin-bottom: 20px;
+}
+
+/* Form Labels */
+.appointments-container label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ff4c00;
+}
+
+/* Input Fields */
+.appointments-container input,
+.appointments-container select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Button Styling */
+.button-primary {
+    background-color: #ff4c00;
+    color: rgb(243, 238, 238);
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.button-primary:hover {
+    background-color: #ff4c00;
+}
+
+/* WhatsApp Container */
+.whatsapp-container {
+    margin-top: 20px;
+}
+
+.whatsapp-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #25d366;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.whatsapp-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Moves logo left and buttons right */
+    align-items: center;
+    background-color: #ff4c00; /* Light pink background */
+    padding: 10px 80px;
+}
+
+/* Logo Styling */
+.logo img {
+    height: 80px; /* Adjust logo size */
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(249, 246, 244);
+    font-weight: bold;
+}
+.about-container {
+    max-width: 50%; /* Adjust width to keep text on the left */
+    text-align: left; /* Align text to the left */
+    padding: 40px; /* Add spacing */
+    background: rgba(255, 255, 255, 0.8); /* Light background for better readability */
+    border-radius: 10px; /* Add rounded corners */
+    margin: 50px; /* Add margin from edges */
+}
+
+.about-container h2 {
+    font-size: 2.5rem;
+    color: #ff4c00; /* Elegant dark purple */
+    margin-bottom: 10px;
+}
+
+.about-container p {
+    font-size: 1.2rem;
+    color: #ff4c00;
+    line-height: 1.6; /* Improve readability */
+}

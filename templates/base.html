@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <script src="/static/js/script.js" defer></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tina Beauty Salon</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="/static/images/logo.jpeg" alt="Tina Beauty Salon">
+        </div>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/services">Services</a>
+            <a href="/appointments">Appointments</a>
+            <a href="/about">About</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Tina Beauty Salon. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
